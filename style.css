@@ -2,3 +2,19 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  width: 855px;
+  margin: auto;
+  background: ivory;
+  font-size: 100%;
+  font-family: "Arial", sans-serif;
+}
+
+.comments p:nth-child(even) {
+  background: lavender;
+}
+
+.comments p:nth-child(odd) {
+  background: gainsboro;
+}
