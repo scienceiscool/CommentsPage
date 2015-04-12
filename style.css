@@ -1,4 +1,5 @@
 * {
+  /* get rid of default margin and padding */
   margin: 0;
   padding: 0;
 }
@@ -11,10 +12,77 @@ body {
   font-family: "Arial", sans-serif;
 }
 
+header {
+  overflow: auto;
+  border-bottom: 1px solid darkslategray;
+}
+
+h1 {
+  float: left;
+}
+
+header p {
+  float: right;
+  width: 570px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+main {
+  overflow: auto;
+  padding: 30px 0;
+  border-bottom: 1px solid darkslategray;
+}
+
+.comment-input {
+  float: left;
+  width: 285px;
+}
+
+.comment-input p {
+  margin-bottom: 10px;
+}
+
+.comment-input input {
+  width: 80%;
+  height: 30px;
+  font-size: 1.2em; /* textbox input will be a tad larger than default */
+  font-weight: bold; /* textbox input will be bold */
+}
+
+.comment-input button {
+  font-weight: bold; /* button text will be emboldened */
+  padding: 3px;
+  border-radius: 5px; /* adds cool 3D sort of effect to button */
+  color: ivory; /* button text will turn this color */
+  background: navy; /* background of button will be this color */
+  cursor: pointer; /* When you hover your mouse over the button,
+                      it'll change into the pointing cursor */
+  font-size: 1.5em; /* button gets larger */
+  margin-left: 5px; /* puts some space between textbox and button */
+}
+
+.comments {
+  float: right;
+  width: 570px;
+}
+
+.comments p {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px; /* rounds the edges of the comment background */
+}
+
 .comments p:nth-child(even) {
   background: lavender;
 }
 
 .comments p:nth-child(odd) {
   background: gainsboro;
+}
+
+footer {
+  font-size: smaller;
+  margin-top: 5px;
+  clear: both;
 }
