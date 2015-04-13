@@ -1,7 +1,7 @@
 var main = function () {
- "use strict";
+  "use strict";
 
- $(".comment-input button").on("click", function (event) {
+  $(".comment-input button").on("click", function (event) {
 
   //console.log("Hello World!");
   //$(".comments").append("<p>this is a new comment</p>");
@@ -17,6 +17,19 @@ var main = function () {
     $(".comments").append($new_comment);
     $(".comment-input input").val("");
   }
+ });
+
+ // code below is an event listener that follows the same logic as above,
+ // except it responds when the Enter key is pressed
+ $(".comment-input input").on("keypress", function (event) {
+   if (event.keyCode === 13) {
+     if ($(".comment-input input").val() !== "") {
+       var $new_comment = $("<p>").text($(".comment-input input").val());
+       $(".comments").append($new_comment);
+       $(".comment-input input").val("");
+       //console.log("keyCode: " + event.keyCode);
+     }
+   }
  });
 };
 
