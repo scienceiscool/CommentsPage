@@ -15,6 +15,7 @@ var main = function () {
   if ($(".comment-input input").val() !== "") {
     $new_comment.text(comment_text);
     $(".comments").append($new_comment);
+    $(".comment-input input").val("");
   }
  });
 };
