@@ -14,7 +14,11 @@ var main = function () {
   // it won't publish an empty comment now
   if ($(".comment-input input").val() !== "") {
     $new_comment.text(comment_text);
+    // the following lines calling hide() and fadeIn() and in the next
+    // block of code allow for a comment to not just appear but fade in
+    $new_comment.hide();
     $(".comments").append($new_comment);
+    $new_comment.fadeIn();
     $(".comment-input input").val("");
   }
  });
@@ -25,7 +29,9 @@ var main = function () {
    if (event.keyCode === 13) {
      if ($(".comment-input input").val() !== "") {
        var $new_comment = $("<p>").text($(".comment-input input").val());
+       $new_comment.hide();
        $(".comments").append($new_comment);
+       $new_comment.fadeIn();
        $(".comment-input input").val("");
        //console.log("keyCode: " + event.keyCode);
      }
