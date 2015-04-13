@@ -55,7 +55,7 @@ main {
   padding: 3px;
   border-radius: 5px; /* adds cool 3D sort of effect to button */
   color: ivory; /* button text will turn this color */
-  background: navy; /* background of button will be this color */
+  background: seagreen; /* background of button will be this color */
   cursor: pointer; /* When you hover your mouse over the button,
                       it'll change into the pointing cursor */
   font-size: 1.5em; /* button gets larger */
@@ -74,11 +74,11 @@ main {
 }
 
 .comments p:nth-child(even) {
-  background: lavender;
+  background: palevioletred;
 }
 
 .comments p:nth-child(odd) {
-  background: gainsboro;
+  background: palegreen;
 }
 
 footer {
