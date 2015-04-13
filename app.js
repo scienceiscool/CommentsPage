@@ -10,8 +10,12 @@ var main = function () {
      // $ in front of above variable bc it will hold a jQuery object
    comment_text = $(".comment-input input").val();
 
-  $new_comment.text(comment_text);
-  $(".comments").append($new_comment);
+  // the following if statement fixes a bug
+  // it won't publish an empty comment now
+  if ($(".comment-input input").val() !== "") {
+    $new_comment.text(comment_text);
+    $(".comments").append($new_comment);
+  }
  });
 };
 
