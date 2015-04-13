@@ -1,9 +1,14 @@
 var main = function () {
   "use strict";
 
+  var $newParagraphElement = $("<p>").text("Hey, I'm a paragraph. Second line in the footer.");
+
+  // attach to the DOM
+  $("footer").append($newParagraphElement);
+
   var addCommentFromInputBox = function () {
     // $ in front of variable below bc it will hold a jQuery object
-    var $new_comment;
+    var $new_comment; // create new jQuery object variable
 
     // the following if statement fixes a bug
     // it won't publish an empty comment now
