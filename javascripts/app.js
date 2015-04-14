@@ -1,10 +1,32 @@
 var main = function () {
   "use strict";
 
-  var $newParagraphElement = $("<p>").text("Hey, I'm a paragraph. Second line in the footer.");
+  // create new ul element
+  var $newUL = $("<ul>");
 
-  // attach to the DOM
+  var $listItemOne = $("<li>").text("First list item");
+  var $listItemTwo = $("<li>").text("Second list item");
+  var $listItemThree = $("<li>").text("Third list item");
+
+  // create two new p elements
+  var $newParagraphElement = $("<p>").text("Hey, I'm a paragraph. Second line in the footer.");
+  var $footerFirstChild = $("<p>").text("I'm the first child of the footer.");
+
+  // attach new p elements to the DOM
+  // notice: one is appending, one is prepending
   $("footer").append($newParagraphElement);
+  $("footer").prepend($footerFirstChild);
+
+  // attach list items to unordered list, still need to attach to main tree
+  $newUL.append($listItemOne);
+  $newUL.append($listItemTwo);
+  $newUL.append($listItemThree);
+
+  // attach ul element and subtree to main tree
+  $("main").append($newUL);
+
+  // remove ul element and it's list items
+  $("ul").remove();
 
   var addCommentFromInputBox = function () {
     // $ in front of variable below bc it will hold a jQuery object
