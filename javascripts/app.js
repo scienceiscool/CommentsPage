@@ -15,7 +15,8 @@ var main = function () {
   // attach new p elements to the DOM
   // notice: one is appending, one is prepending
   $("footer").append($newParagraphElement);
-  $("footer").prepend($footerFirstChild);
+  $("footer").prepend($footerFirstChild); // equivalent to:
+    // $footerFirstChild.appendTo($("footer"));
 
   // attach list items to unordered list, still need to attach to main tree
   $newUL.append($listItemOne);
@@ -25,8 +26,11 @@ var main = function () {
   // attach ul element and subtree to main tree
   $("main").append($newUL);
 
-  // remove ul element and it's list items
+  // remove elements
   $("ul").remove();
+  //$newUL.empty(); // equivalent to the above line
+  $("footer:first-child").remove();
+  $("footer:nth-child(3)").remove();
 
   var addCommentFromInputBox = function () {
     // $ in front of variable below bc it will hold a jQuery object
