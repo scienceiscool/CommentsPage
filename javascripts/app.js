@@ -29,9 +29,14 @@ var main = function () {
   // remove elements
   $("ul").remove();
   //$newUL.empty(); // equivalent to the above line
-  $("footer p").fadeOut();
+
+  //$("footer p").fadeOut();
   //$("footer:first-child").remove();
   //$("footer:nth-child(3)").remove();
+
+  $("footer p").fadeOut(3000, function () {
+    $("footer p").remove(); // remove after fading out
+  });
 
   var addCommentFromInputBox = function () {
     // $ in front of variable below bc it will hold a jQuery object
